@@ -14,7 +14,7 @@ class Cafe:
     def visit_cafe(self, visitor: dict) -> str:
         if "vaccine" in visitor:
             vaccine = visitor.get("vaccine")
-            today = datetime.datetime.now().date()
+            today = datetime.date.today()
             if vaccine.get("expiration_date") >= today:
                 if visitor.get("wearing_a_mask"):
                     return f"Welcome to {self.name}"
